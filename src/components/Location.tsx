@@ -37,7 +37,7 @@ const Location: React.FunctionComponent = () => {
         <div className="text-white flex flex-col justify-center ml-11 items-start">
             <p className="text-5xl font-extrabold">Park Anywhere with </p>
             <p className="text-5xl font-extrabold mt-1">XXX</p>
-            <p className="text-2xl mt-6 font-semibold">Request a parking spot</p>
+            <p className="text-2xl mt-6 font-semibold">Enter your Location</p>
             <form>
                 <input type="search" className="border border-white bg-white text-black rounded-lg px-20 pl-4 py-2 mt-6 text-left" placeholder="Enter location" value={location} onChange={(e) =>setLocation(e.target.value)}/>
             </form>

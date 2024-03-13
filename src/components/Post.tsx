@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import NavigationBar from './NavigationBar';
 
 const Post: React.FunctionComponent = () => {
     const [location, setLocation] = useState('');
@@ -35,6 +36,8 @@ const Post: React.FunctionComponent = () => {
     };
 
     return (
+        <div>
+            <NavigationBar/>
         <div>
             <div className="flex min-h-screen flex-col justify-center bg-black py-12 sm:px-6 lg:px-8">
                 <div className="sm:mx-auto sm:w-full sm:max-w-md">
@@ -89,6 +92,7 @@ const Post: React.FunctionComponent = () => {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     )
 }

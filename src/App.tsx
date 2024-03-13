@@ -10,6 +10,7 @@ import { BrowserRouter as Router,Route, Link, Routes}  from 'react-router-dom'
 import SelectionPage from './components/SelectionPage'
 import Post from './components/Post'
 import Display from './components/Display'
+import NavigationBar from './components/NavigationBar'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +20,7 @@ function App() {
     <Router>
     <div className='mx-auto container justify-center items-center bg-black'>
       <nav className='flex justify-end items-end bg-black mr-12'>
+        {/* <NavigationBar /> */}
         
         <ul className='flex flex-row gap-3 text-white bg-black mt-3'>
           {/* <li>
@@ -30,15 +32,15 @@ function App() {
           {/* <li>
             <Link to='/selection'>Selection</Link>
           </li> */}
-          <li>
+          {/* <li>
             <Link to='/location'>Location</Link>
-          </li>
+          </li> */}
           {/* <li>
             <Link to='/display/+location'>Display</Link>
           </li> */}
-          <li>
+          {/* <li>
             <Link to='/'>Logout</Link>
-          </li>
+          </li> */}
 
         </ul>
       </nav>
@@ -46,7 +48,7 @@ function App() {
         <Route path="/" Component={LoginPage}/>
         <Route path="/signup" Component={SignupPage}/>
         {/* <Route path="/selection" Component={SelectionPage}/> */}
-        <Route path="/location" Component={Location}/>
+        {/* <Route path="/location" Component={Location}/> */}
         <Route path='/selection' Component={SelectionPage} />
         <Route path='/request' Component={Location}/>
         <Route path='/post' Component={Post}/>

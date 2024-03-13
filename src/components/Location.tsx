@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { Link, useParams } from 'react-router-dom';
 // import DisplaySpots from './DisplaySpots';
+import NavigationBar from './NavigationBar';
 
 const Location: React.FunctionComponent = () => {
     const [location, setLocation]= useState('');
@@ -30,6 +31,8 @@ const Location: React.FunctionComponent = () => {
     // }
 
     return (
+        <div>
+            <NavigationBar/>
     <div className="flex flex-col justify-center items-start h-screen dark:bg-black">
         <div className="text-white flex flex-col justify-center ml-11 items-start">
             <p className="text-5xl font-extrabold">Park Anywhere with </p>
@@ -42,6 +45,7 @@ const Location: React.FunctionComponent = () => {
                 Search
             </Link>
         </div>
+    </div>
     </div>
     )
 }

@@ -1,18 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
+// import NavigationBar from './NavigationBar';
 
 const LoginPage: React.FunctionComponent = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
     const navigate = useNavigate();
-    
+
     const handleLogin = async () => {
         try {
             const response = await fetch('/api/users/' + username, {
                 method: 'GET',
                 headers: {
-                    'Authorization': 'Bearer 1234', // Fix typo in Authorization header
+                    'Authorization': 'Bearer 1234',
                 },
             });
             const data = await response.json();
@@ -20,6 +21,7 @@ const LoginPage: React.FunctionComponent = () => {
             if (data.user.results[0].password === password) {
                 console.log('Login Successful');
                 setMessage('Login successful');
+                localStorage.setItem('username', username); // Store the username in local storage
                 navigate('/selection');
             } else {
                 console.log('Invalid Username or Password');
@@ -30,6 +32,7 @@ const LoginPage: React.FunctionComponent = () => {
             setMessage('Error logging in');
         }
     };
+    
 
     return (
         <div className="flex min-h-screen flex-col justify-center bg-black py-12 sm:px-6 lg:px-8">
@@ -68,7 +71,7 @@ const LoginPage: React.FunctionComponent = () => {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default LoginPage;

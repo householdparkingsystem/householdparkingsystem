@@ -49,17 +49,17 @@ export default function DisplaySpots() {
                 </div>
                 <h1 className='mb-4 text-white'>Available Parking Locations:</h1>
                 <div className="grid grid-cols-3 gap-20">
-                    {spots.map((book, index) => (
+                    {spots.map((loc, index) => (
                         <div key={index} className="bg-white p-4 rounded-lg">
                             <div className="text-black">
-                                <p>Location: {book.location}</p>
-                                <p>Address: {book.address}</p>
-                                <p>Price Per Hour: {book.priceperhour}</p>
-                                <p>Start Time: {book.starttime} am</p>
-                                <p>End Time: {book.endtime} pm</p>
+                                <p>Location: {loc.location}</p>
+                                <p>Address: {loc.address}</p>
+                                <p>Price Per Hour: {loc.priceperhour}</p>
+                                <p>Start Time: {loc.starttime} am</p>
+                                <p>End Time: {loc.endtime} pm</p>
                             </div>
                             <div className="flex justify-center items-center mt-4">
-                                <Link to="/preview/ +houseid" onClick={() => handleBook(index)} disabled={disabledButtons[index]} className={`bg-gray-900 text-white px-4 py-2 rounded ${disabledButtons[index] ? 'opacity-50 cursor-not-allowed' : ''}`}>
+                                <Link to={`/preview/${loc.houseid}`} onClick={() => handleBook(index)} disabled={disabledButtons[index]} className={`bg-gray-900 text-white px-4 py-2 rounded ${disabledButtons[index] ? 'opacity-50 cursor-not-allowed' : ''}`}>
                                     Book
                                 </Link>
                                 {bookedSpot === index && <p className="ml-2 text-sm text-gray-700">Successfully booked!</p>}

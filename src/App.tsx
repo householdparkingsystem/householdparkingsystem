@@ -54,7 +54,7 @@ function App() {
         <Route path='/post' Component={Post}/>
         <Route path='/display/:location' element={<DisplaySpots />}/>
         <Route path='/' Component={LoginPage}/>
-        <Route path='/preview/:location' element={<Display/>}/>
+        <Route path='/preview/:houseid' element={<Display/>}/>
       </Routes>
     </div>
   </Router>

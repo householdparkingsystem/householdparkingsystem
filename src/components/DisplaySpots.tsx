@@ -59,9 +59,9 @@ export default function DisplaySpots() {
                                 <p>End Time: {book.endtime} pm</p>
                             </div>
                             <div className="flex justify-center items-center mt-4">
-                                <button onClick={() => handleBook(index)} disabled={disabledButtons[index]} className={`bg-gray-900 text-white px-4 py-2 rounded ${disabledButtons[index] ? 'opacity-50 cursor-not-allowed' : ''}`}>
+                                <Link to="/preview/ +houseid" onClick={() => handleBook(index)} disabled={disabledButtons[index]} className={`bg-gray-900 text-white px-4 py-2 rounded ${disabledButtons[index] ? 'opacity-50 cursor-not-allowed' : ''}`}>
                                     Book
-                                </button>
+                                </Link>
                                 {bookedSpot === index && <p className="ml-2 text-sm text-gray-700">Successfully booked!</p>}
                             </div>
                         </div>

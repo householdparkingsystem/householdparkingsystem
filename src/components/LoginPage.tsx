@@ -35,6 +35,10 @@ const LoginPage: React.FunctionComponent = () => {
     
 
     return (
+        <div>
+        <nav className=''>
+
+        </nav>
         <div className="flex min-h-screen flex-col justify-center bg-black py-12 sm:px-6 lg:px-8">
             <div className="sm:mx-auto sm:w-full sm:max-w-md">
                 <h2 className="animation-bounce mt-6 text-center text-3xl font-extrabold text-white">Login</h2>
@@ -70,6 +74,7 @@ const LoginPage: React.FunctionComponent = () => {
                     </form>
                 </div>
             </div>
+        </div>
         </div>
     );
 }
